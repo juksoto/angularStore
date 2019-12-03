@@ -6,18 +6,39 @@
   
   <p>A que tu nombre es:{{nombre}}</p>
   </div>
-  <hr>
-  <em>
-    El primero hace un enlace de doble sentido, es decir, si se actualiza la vista se actualiza el valor y si se actualiza el valor se actualiza la vista.
-  </em>
-  <hr>
+<h2>
+  NgIF
+</h2>
+<p>
+  <strong>
+    Ejemplo 1
+  </strong>
+</p>
+ <div *ngIf="1 === 1">
+    Uno es igual en todo sentido a 1. Muestro si cumplo condicional
+ </div>  
+ <div *ngIf="1 !== 1">
+  Uno es diferente a 1. Muestro si cumplo condicional
+</div>  
+<p>
+  Ejemplo con bind
+</p>
+<div *ngIf="nombre != 'Juan'">
+ La variable nombe es diferente a Juan
+</div>
 
-  <div>
-    <p>Esta es otra forma de bind: un sólo flujo</p>
-    <div><input [ngModel]="apellido"></div>
-    <div>Tu apellido es 🤔 {{apellido}}</div>
-    <em>
-      El segundo hace un enlace de un sólo sentido, este sentido va desde el modelo a la vista, pero la vista NO puede actualizar al modelo.
-    </em>
+<hr>
+<p>
+  También podemos usar otros operadores condicionales pero usando templates o vistas:
+</p>
+<div *ngIf="title === 'Store'; then store else welcome">
+  Simple vista
+</div>
+<!-- Vista o template-->
+<ng-template #store>
+  Mostrando contenido
+</ng-template>
 
-  </div>
+<ng-template #welcome>
+  Bienvenido a Platzi Store
+</ng-template>
