@@ -9,4 +9,14 @@ export class AppComponent {
   title = 'Store';
   nombre = '';
   apellido = '';
+  nuevoItem = '';
+
+  items = ['juan', 'pedro', 'carlos'];
+  addItem(v: string) {
+    this.items.push(v);
+  };
+
+  removeItem(index: number){
+    this.items.splice(index, 1);
+  }
 }

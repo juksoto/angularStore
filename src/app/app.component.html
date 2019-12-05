@@ -1,3 +1,40 @@
+<h2>
+  NgFor
+</h2>
+
+<ul>
+<li *ngFor ="let name of items ">
+  <p>
+      {{name}}
+  </p>
+</li>
+
+</ul>
+<p>
+  Conocer la posicion
+</p>
+<ul>
+  <!--  Condicional si la lista esta vacia -->
+  <li *ngIf="items.length==0"> Lista Vacia</li>
+  <!-- Ciclo y uso de metodos -->
+  <li *ngFor ="let name of items; index as i ">
+    <p>
+        {{name}} {{i}} <button (click)="removeItem(i)"> Remove Item</button>
+    </p>
+  </li>
+  
+  </ul>
+  <p>
+    Agregar un item al array, con un valor capturado de un input
+    <br>
+    // agregar acciones es con () -> (click)
+  </p>
+  <input type="text" [(ngModel)]="nuevoItem">
+  <button (click)="addItem(nuevoItem)"> Add Item</button>
+
+
+  <hr>
+
 <p>
   Ejemplo de Data Bubd 
 </p>
@@ -42,3 +79,4 @@
 <ng-template #welcome>
   Bienvenido a Platzi Store
 </ng-template>
+
