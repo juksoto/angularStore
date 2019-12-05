@@ -1,4 +1,32 @@
 <h2>
+    ngSwtich
+</h2>
+<!-- metodo con ngSwift -->
+<div [ngSwitch]="nombre">
+<p *ngSwitchCase ="'Juan'" > Soy Juan </p>
+<p *ngSwitchCase ="'Pedro'" > Soy Pedro </p>
+<p *ngSwitchCase ="'Lucas'" > Soy Lucas </p>
+<p *ngSwitchDefault > No hay comparaciones </p>
+
+</div>
+<!-- metodo con if -->
+<div *ngIf = "nombre === 'Juan'" >
+  <p>
+      Soy Juan
+  </p>
+</div>
+<div *ngIf = "nombre === 'Pedro'" >
+  <p>
+      Soy Pedro
+  </p>
+</div>
+<div *ngIf = "nombre === 'Lucas'" >
+  <p>
+      Soy Lucas
+  </p>
+</div>
+<hr>
+<h2>
   NgFor para recorrer objetos
 </h2>
 <div *ngFor="let product of products">
