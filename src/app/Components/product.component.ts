@@ -43,7 +43,7 @@ export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
     ngDoCheck() {
         console.log('4. Do Check');
     }
-// Nos sirve para detectar si se elminar algo. Sirve para destruir 
+/* Nos sirve para detectar si se elminar algo. Sirve para destruir */
     ngOnDestroy() {
         console.log('5. OnDestoy');
     }
