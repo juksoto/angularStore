@@ -1,8 +1,25 @@
 <h2>
+  Input y Output
+</h2>
+  <!-- Al componente product recorremos con un array y le enviamos cada valor.
+  app-product -> fue declarado para que lo buscara en la carpeta componentes > product
+  aqui declaramos el product
+  El product esta con el modelo product, que nos filtra la cantidad de campos que puede tener.
+  E imprime los valores usando la vista product.html
+  Output se pone entre parentesis
+  -->
+  <div *ngFor="let product of products">
+      <app-product (productClicked)="clickProduct($event)" [product] ="product" ></app-product>
+  </div>
+  
+  <hr>
+
+<hr>
+<hr>
+<h2>
   Componentnes
 </h2>
 
-<app-product></app-product>
 <hr>
 <h2>
     ngSwtich

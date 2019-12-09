@@ -61,9 +61,11 @@ export class AppComponent {
 
   addItem(v: string) {
     this.items.push(v);
-  };
-
-  removeItem(index: number){
+  }
+  removeItem(index: number) {
     this.items.splice(index, 1);
   }
+  clickProduct(id: number) {
+    console.log(id);
+}
 }
