@@ -1,4 +1,15 @@
 <h2>
+  Pipe
+</h2>
+<p>
+  Los pipes nos sirven para transformar datos. Un dato puede ingresar y puede ser convertido segun el pipe usado.
+  Es mejor hacer pipes que funciones. Tienen alto rendimiento.
+</p>
+
+<input type="text" [(ngModel)]="power">
+{{power | exponencial}}
+<hr>
+<h2>
   Input y Output
 </h2>
   <!-- Al componente product recorremos con un array y le enviamos cada valor.

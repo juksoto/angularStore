@@ -12,6 +12,7 @@ export class AppComponent {
   nombre = '';
   apellido = '';
   nuevoItem = '';
+  power = 10;
 
   items = ['juan', 'pedro', 'carlos'];
   products: Product[] = [
