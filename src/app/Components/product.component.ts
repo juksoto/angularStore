@@ -15,7 +15,8 @@ import { Product } from '../product.model';
 
 @Component({
     selector: 'app-product',
-    templateUrl: './product.component.html'
+    templateUrl: './product.component.html',
+    styleUrls: ['./product.component.scss']
 })
 // Traemos dinamicamente la informacion a product
 /* Como vamos a analizar el onChanges hay que agregar la interfaz, onChanges e implementarlo. */
