@@ -1,15 +1,19 @@
 <div class="p_item">
     <h3>
-        {{product.title}}
+        {{product.title | uppercase }}
     </h3>
         <figure>
         <img [src] = 'product.image' [alt] = 'product.description' style="max-width:50px; width:100%; height:auto">
         </figure>
         <em>
-        {{product.price}}
+        {{product.price | currency }}
         </em>
         <p>
-        {{product.description}}
+            {{today | date:'medium'}}
+        </p>
+        <p>
+            <!-- Cortar los textos hasta 20 caracteres un rango de 0 a 10 caracteres-->
+            {{product.description | slice: 0:10}}
         </p>
     <button (click) = 'addCart()' class="btn">  Add Cart</button>
         

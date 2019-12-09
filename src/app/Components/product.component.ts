@@ -26,6 +26,8 @@ export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
     /* Eventos. Any -> puedo enviar cualquier tipo (string, number). Es para enviar del controlador. Inicializamos el event Emitter */
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
+    today = new Date();
+
     /* Inicio del ciclo de vida del componente */
     constructor() {
         console.log('1. constructor');
