@@ -1,0 +1,14 @@
+nav li{
+    display: inline-block;
+}
+nav  a{
+    display: block;
+    padding:0.5em;
+    color: #333;
+}
+nav  a.active{
+    display: block;
+    padding:0.5em;
+    color: #fff;
+    background-color: #27a3d0;
+}

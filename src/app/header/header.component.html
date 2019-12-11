@@ -1,1 +1,12 @@
-<p>header works!</p>
+<nav class="container">
+    <ul>
+        <li><a href="/products">Productos</a></li>
+        <li><a href="/contact">Contacto</a></li>
+        <!-- En Angular existe una directiva llamada routerLink, con ella se evita que se recargue la pagina cada vez que navegamos entre las rutas, manteniendo nuestro proyecto como una ‘Single Page Application’. La forma de aplicarlo es cambiar las referencias href en html por routerLink.-->
+        <li><a routerLink="/products" routerLinkActive="active">Productos</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+        <!-- Esta directiva le asigna una clase determinada a la etiqueta html si y solo si esta parado en la ruta definida con routerLink, por lo general esta es “active”. Con esto podemos asignar estilos para esta clase en particular. html-->
+        <li><a routerLink="/home" routerLinkActive="active" >Home</a></li>
+
+    </ul>
+</nav>
