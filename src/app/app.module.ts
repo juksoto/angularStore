@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { Page404Component } from './page404/page404.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Page404Component } from './page404/page404.component';
     HeaderComponent,
     FooterComponent,
     BannerComponent,
-    Page404Component
+    Page404Component,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

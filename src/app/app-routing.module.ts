@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
 import { DemoComponent } from './demo/demo.component';
 import { Page404Component } from './page404/page404.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
 /*Son objetos
@@ -35,10 +36,16 @@ const routes: Routes = [
     path: 'demo',
     component: DemoComponent
   },
+  // enviamos un parametro dinamico
+  {
+    path: 'products/:id',
+    component: ProductDetailComponent
+  },
   {
     path: '**',
     component: Page404Component
   }
+
 ];
 
 @NgModule({
