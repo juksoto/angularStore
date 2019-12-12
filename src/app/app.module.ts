@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 import { Page404Component } from './page404/page404.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     FooterComponent,
     BannerComponent,
     Page404Component,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

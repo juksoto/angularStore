@@ -7,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { DemoComponent } from './demo/demo.component';
 import { Page404Component } from './page404/page404.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
 /*Son objetos
@@ -17,29 +18,36 @@ const routes: Routes = [
 /* redirecciona al componente home si solo se escribe el dominio */
   {
     path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'products',
-    component: ProductsComponent
-  },
-  {
-    path: 'demo',
-    component: DemoComponent
-  },
-  // enviamos un parametro dinamico
-  {
-    path: 'products/:id',
-    component: ProductDetailComponent
+    component: LayoutComponent,
+    /* Usamos como layout un componente y asigamos a sus hijos*/
+    children: [
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
+      {
+        path: 'products',
+        component: ProductsComponent
+      },
+      {
+        path: 'demo',
+        component: DemoComponent
+      },
+      // enviamos un parametro dinamico
+      {
+        path: 'products/:id',
+        component: ProductDetailComponent
+      }
+    ]
   },
   {
     path: '**',
