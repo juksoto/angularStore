@@ -16,5 +16,6 @@
             {{product.description | slice: 0:10}}
         </p>
     <button (click) = 'addCart()' class="btn">  Add Cart</button>
-        
+    <!-- concatenamos la url con el id-->
+     <a [routerLink] ="['/products', product.id]"> Ver detalles </a>   
 </div>
