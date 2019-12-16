@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 /* ActivateRoute -> inyeccion de dependencia */
 /* Params -> parametros */
 import { ActivatedRoute, Params } from '@angular/router';
-import { ProductsService } from '../products.service';
+import { ProductsService } from '../core/services/products/products.service';
 import { Product } from './../product.model';
 
 @Component({
