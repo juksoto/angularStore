@@ -8,6 +8,8 @@ import { Page404Component } from './page404/page404.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
 
+import { AdminGuard } from './guardians/admin.guard';
+
 const routes: Routes = [
 /*Son objetos
   * path: string donde indica la ruta. La url por donde ingresa
@@ -32,10 +34,12 @@ const routes: Routes = [
       },
       {
         path: 'contact',
+        canActivate: [AdminGuard],
         component: ContactComponent
       },
       {
         path: 'products',
+        canActivate: [AdminGuard],
         component: ProductsComponent
       },
       {
