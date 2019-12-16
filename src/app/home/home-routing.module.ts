@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules} from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+    {
+        path: '',
+        component: HomeComponent
+    }
+];
 
 @NgModule ({
     imports: [
         //
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
     ],
     exports: [
         // este modulo sea exportable. Para que otros modulos lo puedan usar.
@@ -14,4 +20,4 @@ const routes: Routes = [];
     ]
 })
 
-export class HomeRoutingModule {}
+export class HomeRoutingModule { }
