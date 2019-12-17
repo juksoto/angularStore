@@ -15,7 +15,7 @@
             <!-- Cortar los textos hasta 20 caracteres un rango de 0 a 10 caracteres-->
             {{product.description | slice: 0:10}}
         </p>
-    <button (click) = 'addCart()' class="btn">  Add Cart</button>
+    <button (click) = 'addCart()' mat-raised-button  color="primary">  Add Cart</button>
     <!-- concatenamos la url con el id-->
      <a [routerLink] ="['/products', product.id]"> Ver detalles </a>   
 </div>

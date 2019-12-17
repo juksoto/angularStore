@@ -11,6 +11,7 @@ import {
     DoCheck,
     OnDestroy
  } from '@angular/core';
+
 import { Product } from '../../models/product.model';
 
 @Component({

@@ -5,13 +5,11 @@ import { RouterModule } from '@angular/router';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 
-import { ProductComponent } from '../product/components/product/product.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    ProductComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
@@ -22,7 +20,6 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterModule
   ],
   exports: [
-    ProductComponent,
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
