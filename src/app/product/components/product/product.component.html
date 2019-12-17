@@ -1,21 +1,24 @@
-<div class="p_item">
-    <h3>
-        {{product.title | uppercase }}
-    </h3>
-        <figure>
-        <img [src] = 'product.image' [alt] = 'product.description' style="max-width:50px; width:100%; height:auto">
-        </figure>
-        <em>
-        {{product.price | currency }}
-        </em>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            {{product.title | uppercase }}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{product.price | currency }}
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
         <p>
-            {{today | date:'medium'}}
-        </p>
-        <p>
-            <!-- Cortar los textos hasta 20 caracteres un rango de 0 a 10 caracteres-->
             {{product.description | slice: 0:10}}
         </p>
-    <button (click) = 'addCart()' mat-raised-button  color="primary">  Add Cart</button>
-    <!-- concatenamos la url con el id-->
-     <a [routerLink] ="['/products', product.id]"> Ver detalles </a>   
-</div>
+    </mat-card-content>
+    <div class="crop-image">
+        <img mat-card-image [src] = 'product.image' [alt] = 'product.description'>
+    </div>
+    <mat-card-actions>
+        <button (click) = 'addCart()' mat-raised-button  color="primary">  Add Cart</button>
+        <!-- concatenamos la url con el id-->
+         <a [routerLink] ="['/products', product.id]" mat-button> Ver detalles </a>   
+    </mat-card-actions>
+</mat-card>

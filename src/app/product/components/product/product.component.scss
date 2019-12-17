@@ -1,35 +1,15 @@
-/* Elemetno app-product*/
-:host {
-   border:1px solid black;
-}
-.p_item
+.crop-image
 {
-    
-    border-radius: 0.4em;
-    border:1px solid #f8f8f8;
-    background-color: #efefef;
-    padding: 1em;
-    
-    text-align: center;
-    vertical-align: top;
-    
-    min-height: 360px; 
+    height: 300px;
+    width:100%;
+    overflow: hidden;
+    position: relative;
+    img
+    {
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+    }
 }
-.p_item h3
-{
-    color: #00FF
-}
-.p_item figure {
-    max-width: 300px;
-    display:inline-block;
-}
-.p_item figure img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: none !important;
-    display: block;
-}
-.p_item em, .p_item p {
-    display: block;
-}
-
