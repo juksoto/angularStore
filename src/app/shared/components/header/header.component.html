@@ -1,12 +1,12 @@
-<nav class="container">
-    <ul>
-        <li><a href="/products">Productos</a></li>
-        <li><a href="/contact">Contacto</a></li>
-        <!-- En Angular existe una directiva llamada routerLink, con ella se evita que se recargue la pagina cada vez que navegamos entre las rutas, manteniendo nuestro proyecto como una ‘Single Page Application’. La forma de aplicarlo es cambiar las referencias href en html por routerLink.-->
-        <li><a routerLink="/products" routerLinkActive="active">Productos</a></li>
-        <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
-        <!-- Esta directiva le asigna una clase determinada a la etiqueta html si y solo si esta parado en la ruta definida con routerLink, por lo general esta es “active”. Con esto podemos asignar estilos para esta clase en particular. html-->
-        <li><a routerLink="/home" routerLinkActive="active" >Home</a></li>
-
-    </ul>
-</nav>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <div class="row between-xs middle-xs header-row" >
+            <nav>
+                <a mat-button routerLink="/home" routerLinkActive="active" > <mat-icon>home</mat-icon> Home</a>
+                <a mat-button routerLink="/products" routerLinkActive="active"> <mat-icon>favorite_border</mat-icon>  Productos</a>
+                <a mat-button routerLink="/contact" routerLinkActive="active"><mat-icon>mail_outline</mat-icon> Contacto</a>
+            </nav>
+            <a mat-raised-button routerLink="/cart" routerLinkActive="active"><mat-icon>shopping_cart</mat-icon> Carrito  <span matBadge="4" matBadgeOverlap="false" matBadgeColor="warn"></span></a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
