@@ -14,5 +14,6 @@
                 <!-- Cortar los textos hasta 20 caracteres un rango de 0 a 10 caracteres-->
                 {{product.description | slice: 0:10}}
             </p>
+            <button mat-raised-button (click)= "createProduct()">Crear</button>
     </div>
 </div>
