@@ -15,10 +15,20 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.products =  this.productsService.getAllProducts();
+    this.fetchProducts();
   }
 
   clickProduct(id: number) {
     console.log(id);
   }
+
+  fetchProducts () {
+    // subscribe -> se conecta cualquier cambio que hagan.
+    this.productsService.getAllProducts()
+    .subscribe(products => {
+      // products es un object... this products es una array
+      this.products = products;
+    })
+  }
+  
 }
