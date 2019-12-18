@@ -1,15 +1,18 @@
-<div class="p_item">
-    <h3>
-        {{product.title | uppercase }}
-    </h3>
-        <figure>
-        <img [src] = 'product.image' [alt] = 'product.description' style="max-width:50px; width:100%; height:auto">
-        </figure>
-        <em>
-        {{product.price | currency }}
-        </em>
-        <p>
-            <!-- Cortar los textos hasta 20 caracteres un rango de 0 a 10 caracteres-->
-            {{product.description | slice: 0:10}}
-        </p>
+<!-- COnectar a un api, mietnras trae informacion puede gernar error. Por eso se debe poner en el html un ngIf. Valida si existe y no esta indefinido, imprima el html -->
+<div *ngIf ="product">
+    <div class="p_item">
+        <h3>
+            {{product.title | uppercase }}
+        </h3>
+            <figure>
+            <img [src] = 'product.image' [alt] = 'product.description' style="max-width:50px; width:100%; height:auto">
+            </figure>
+            <em>
+            {{product.price | currency }}
+            </em>
+            <p>
+                <!-- Cortar los textos hasta 20 caracteres un rango de 0 a 10 caracteres-->
+                {{product.description | slice: 0:10}}
+            </p>
+    </div>
 </div>

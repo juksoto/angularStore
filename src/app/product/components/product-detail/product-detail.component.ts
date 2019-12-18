@@ -23,8 +23,16 @@ export class ProductDetailComponent implements OnInit {
     // detectar si hay cambios en los parametros. Me suscribo a ese cambio. Envio un array como parametro
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
-      this.product = this.productsService.getProduct(id);
+      this.fetchProduct(id);
+    //  this.product = this.productsService.getProduct(id);
     } );
   }
 
+  fetchProduct( id: string) {
+    this.productsService.getProduct(id)
+    .subscribe(product => {
+      // products es un object... this products es una array
+      this.product = product;
+    });
+  }
 }
