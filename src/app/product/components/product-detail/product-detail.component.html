@@ -15,5 +15,7 @@
                 {{product.description | slice: 0:10}}
             </p>
             <button mat-raised-button (click)= "createProduct()">Crear</button>
+            <button mat-raised-button (click)= "updateProduct()">Update</button>
+            <button mat-raised-button (click)= "deleteProduct(product.id)">Borrar</button>
     </div>
 </div>

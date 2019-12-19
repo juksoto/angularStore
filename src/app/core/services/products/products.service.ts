@@ -28,4 +28,12 @@ export class ProductsService {
   createProduct(product: Product) {
     return this.http.post(environment.url_api, product);
   }
+// enviar una sola parte del producto. usamos Partial<Product>. Esto indica que solo es la parte donde hubo cambios.
+  updateProduct(id: string, changes: Partial<Product>) {
+    return this.http.put(`${environment.url_api}/${id}`, changes);
+  }
+
+  deleteProduct(id: string) {
+    return this.http.delete(`${environment.url_api}/${id}`);
+  }
 }
