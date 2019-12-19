@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
     console.log(id);
   }
 
-  fetchProducts () {
+  fetchProducts() {
     // subscribe -> se conecta cualquier cambio que hagan.
     this.productsService.getAllProducts()
     .subscribe(products => {
