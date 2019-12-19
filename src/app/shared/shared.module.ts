@@ -7,6 +7,8 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CartComponent } from '../product/components/cart/cart.component';
+
 import { MaterialModule } from '../material/material.module';
 
 
@@ -15,7 +17,8 @@ import { MaterialModule } from '../material/material.module';
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
-    HighlightDirective
+    HighlightDirective,
+    CartComponent
   ],
   imports: [
     CommonModule,
