@@ -1,0 +1,15 @@
+<form  [formGroup]="form">  
+    <mat-form-field>
+        <input formControlName= "id" placeholder="id" matInput type="text" >
+    </mat-form-field>
+    <mat-form-field>
+        <input formControlName= "title" placeholder="Title" matInput type="text" >
+    </mat-form-field>
+    <mat-form-field>
+        <input formControlName= "price" placeholder="Price"  matInput type="text" >
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput #message maxlength="256" placeholder="Message" formControlName= "description">
+      </mat-form-field>
+
+</form>
